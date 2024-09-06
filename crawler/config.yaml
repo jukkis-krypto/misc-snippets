@@ -1,0 +1,94 @@
+# config.yaml
+openai_api_key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # OpenAI API key, not used by crawler
+domain: "www.domain.xyz" # Domain to crawl
+initial_path: "https://www.domain.xyz/some/path/" # Path to start crawling
+page_limit: null  # Limit the crawl to n pages for testing purposes. Value null means no limit
+stay_within_path: true  # Flag to stay within the initial path
+count_only: false  # Flag to only count pages without saving content
+
+# Used for chunking the content, not used by crawler
+chunking:
+  strategy: "recursive"  # Options: "fixed_size", "overlapping", "recursive", "semantic"
+  size: 700
+  overlap: 150
+
+# Used when writing the chunks to the database, not used by crawler
+db_params:
+  dbname: "xxxxxxxx"
+  user: "xxxxxxxx"
+  password: "XXXXXXXXXXX"
+  host: "127.0.0.1"
+  port: 0000
+
+# Used to produce the final chatbot response, not used by crawler
+openai_params:
+  model: "gpt-4o"
+  temperature: 0
+  max_tokens: 1000
+  top_p: 1
+  frequency_penalty: 0
+  presence_penalty: 0
+  stop: null
+
+# Used to filter out content when crawling
+restricted_words:
+  media_files:
+    - "png"
+    - "jpg"
+    - "jpeg"
+    - "gif"
+    - "webp"
+    - "bmp"
+    - "svg"
+    - "mp3"
+    - "wav"
+    - "ogg"
+    - "flac"
+    - "mp4"
+    - "avi"
+    - "mov"
+    - "wmv"
+    - "mkv"
+    - "flv"
+    - "webm"
+  stylesheets:
+    - "css"
+  documents:
+    - "pdf"
+    - "doc"
+    - "docx"
+    - "xls"
+    - "xlsx"
+    - "ppt"
+    - "pptx"
+    - "zip"
+    - "rar"
+    - "7z"
+    - "tar"
+    - "gz"
+  sections:
+    - "login"
+    - "signup"
+    - "register"
+    - "account"
+    - "user"
+    - "profile"
+    - "settings"
+    - "admin"
+    - "dashboard"
+    - "logout"
+    - "cart"
+    - "checkout"
+    - "search"
+    - "terms"
+    - "privacy"
+    - "policy"
+    - "contact"
+    - "about"
+    # - "faq"
+    # - "help"
+    # - "support"
+  scripts:
+    - "javascript"
+    - "js"
+    - "vbscript"
