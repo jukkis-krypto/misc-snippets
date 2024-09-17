@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+PyYAML
+openai
+psycopg2-binary
+langchain
+fastapi
+uvicorn
+json
+uuid
+datetime
