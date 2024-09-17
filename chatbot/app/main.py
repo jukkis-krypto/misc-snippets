@@ -8,9 +8,8 @@ app = FastAPI()
 
 # Define allowed origins for CORS
 origins = [
-    "http://193.94.15.116",  # Example: allow localhost
-    "https://193.94.15.116",  # Example: allow localhost on a specific port
-    "*",
+    "http://193.94.15.116",  
+    "https://193.94.15.116",  
 ]
 
 # Add CORS middleware
